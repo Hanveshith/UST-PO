@@ -1,0 +1,11 @@
+code,locale,name,descr
+IN,en-IN,India,Local settings for India region
+US,en-US,United States,English locale for US
+UK,en-GB,United Kingdom,British English locale
+DE,de-DE,Germany,German language locale
+FR,fr-FR,France,French language locale
+JP,ja-JP,Japan,Japanese locale
+CN,zh-CN,China,Simplified Chinese locale
+AE,ar-AE,United Arab Emirates,Arabic locale for UAE
+AU,en-AU,Australia,Australian English locale
+SG,en-SG,Singapore,English locale for Singapore region

@@ -1,0 +1,11 @@
+code,symbol,minorUnit,name,descr
+INR,₹,2,Indian Rupee,Official currency of India
+USD,$,2,US Dollar,Official currency of the United States
+EUR,€,2,Euro,Official currency of European Union
+GBP,£,2,British Pound,Official currency of the United Kingdom
+JPY,¥,0,Japanese Yen,Official currency of Japan
+AUD,$,2,Australian Dollar,Official currency of Australia
+CAD,$,2,Canadian Dollar,Official currency of Canada
+SGD,$,2,Singapore Dollar,Official currency of Singapore
+AED,د.إ,2,Dirham,Official currency of UAE
+CHF,CHF,2,Swiss Franc,Official currency of Switzerland

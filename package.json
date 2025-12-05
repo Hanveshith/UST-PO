@@ -14,5 +14,8 @@
     "@sap/cds-dk": "^9.5.0",
     "dotenv": "^17.2.3",
     "express": "^4.22.1"
+  },
+  "devDependencies": {
+    "cap-js-mockdata": "^0.0.3"
   }
 }
