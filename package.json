@@ -4,7 +4,10 @@
   "description": "This is a purchase order management cycle application",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch-masterdata": "cds watch --open ust.po.masterdata.masterdata/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-purchaseorder": "cds watch --open ust.po.poheader.purchaseorder/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-ustpo": "cds watch --open ust.po.masterdata.ustpo/index.html?sap-ui-xx-viewCache=false --livereload false"
   },
   "author": "Hanveshith",
   "license": "MIT",
@@ -16,6 +19,13 @@
     "express": "^4.22.1"
   },
   "devDependencies": {
-    "cap-js-mockdata": "^0.0.3"
-  }
+    "cap-js-mockdata": "^0.0.3",
+    "cds-plugin-ui5": "^0.13.0"
+  },
+  "workspaces": [
+    "app/*"
+  ],
+  "sapux": [
+    "app/ustpo"
+  ]
 }

@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "database": "${workspaceFolder:USTPO-HANVESHITH}/USTPO-Hanveshith",
+            "name": "USTPO",
+            "group": "P"
+        }
+    ]
+}

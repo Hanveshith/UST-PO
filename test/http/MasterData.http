@@ -1,0 +1,1200 @@
+@server=http://localhost:4004
+@username=alice
+@password=
+
+
+### VendorMaster
+# @name VendorMaster_GET
+GET {{server}}/odata/v4/master-data/VendorMaster
+Authorization: Basic {{username}}:{{password}}
+
+
+### VendorMaster
+# @name VendorMaster_POST
+POST {{server}}/odata/v4/master-data/VendorMaster
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+      "createdAt": "2024-01-10T10:00:00.000Z",
+      "createdBy": "ADMIN",
+      "modifiedAt": "2024-01-10T10:00:00.000Z",
+      "modifiedBy": "ADMIN",
+      "vm_id": "11111111-1111-1111-1111-11111133333",
+      "vm_code": "VND001",
+      "vm_firstname": "Ravi",
+      "vm_lastname": "Kumar",
+      "vm_name": "Ravi Kumar",
+      "vm_address_vm_street": "12 Gandhi Rd",
+      "vm_address_vm_city": "Hyderabad",
+      "vm_address_vm_state": "Telangana",
+      "vm_address_vm_country": "India",
+      "vm_address_vm_postal": "500001",
+      "vm_gstno": "36ABCDE1234F1Z5",
+      "vm_contactperson": "Anil",
+      "vm_phone": "9876543210",
+      "vm_email": "ravi.kumar@vendor.com",
+      "vm_payment_terms": "LOW",
+      "vm_is_active": "Y"
+    }
+
+### VendorMaster
+# @name VendorMaster_PATCH
+PATCH {{server}}/odata/v4/master-data/VendorMaster/11744836-1aee-4197-9df0-92a047f644ae
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "vm_id": "11744836-1aee-4197-9df0-92a047f644ae",
+  "vm_code": "e-11744836",
+  "vm_firstname": "m_firstname-11744836",
+  "vm_lastname": "vm_lastname-11744836",
+  "vm_name": "vm_name-11744836",
+  "vm_address": {
+    "vm_street": "vm_street-11744836",
+    "vm_city": "vm_city-11744836",
+    "vm_state": "vm_state-11744836",
+    "vm_country": "vm_country-11744836",
+    "vm_postal": "744836"
+  },
+  "vm_gstno": "_gstno-11744836",
+  "vm_contactperson": "ntactperson-11744836",
+  "vm_phone": "e-11744836",
+  "vm_email": "vm_email-11744836",
+  "vm_payment_terms": "45 Days",
+  "vm_is_active": "6",
+  "to_po_header": [
+    {
+      "po_id": "12550293-f79c-4a8d-8f57-c568d016efbf",
+      "po_number": 18,
+      "po_coco": "50293",
+      "po_org": "50293",
+      "po_curr": {
+        "code": "728"
+      },
+      "po_doc_date": "2009-12-22",
+      "po_delivery_date": "2010-08-19",
+      "po_payment_terms": "45 Days",
+      "total_po_value": 589621.18,
+      "po_status": "Cancelled",
+      "po_approvalstatus": {
+        "ApprovalBy": "ApprovalBy-12550293",
+        "ApprovedAt": "2011-07-07T00:00:00.000Z"
+      },
+      "po_remarks": "po_remarks-12550293",
+      "to_po_items": [
+        {
+          "po_item_id": "19906195-c258-4551-bf94-1aa00b28f905",
+          "po_line_itm_no": "itm_no-19906195",
+          "po_itm_material_id": "19906195-7ee0-45ce-9f59-0d13facb1a1f",
+          "po_itm_desc": "po_itm_desc-19906195",
+          "po_itm_quantiy": 31,
+          "po_uom": {
+            "unit": "06195"
+          },
+          "po_net_price": 754322.25,
+          "po_itm_dicount": 0.24,
+          "po_itm_gst": {
+            "percent": 0.14
+          },
+          "po_line_itm_net_value": 23735.22,
+          "po_itm_received_qty": 38,
+          "po_itm_open_qty": 37,
+          "po_itm_status": "FullyReceived",
+          "to_gr_item": [
+            {
+              "gr_item_id": "20873848-70fc-4941-901f-3633893a6b37",
+              "gr_itm_header_id": "20873848-13af-4504-b840-29445ee3e866",
+              "gr_itm_received_qty": 38,
+              "gr_itm_uom": {
+                "unit": "73848"
+              },
+              "gr_itm_batch_no": 90,
+              "gr_remarks": "gr_remarks-20873848",
+              "createdAt": "2012-11-15T00:00:00.000Z",
+              "createdBy": "Donnell66@example.net",
+              "modifiedAt": "2014-09-28T00:00:00.000Z",
+              "modifiedBy": "Carmine.Corkery11@example.org"
+            }
+          ],
+          "to_inv_item": [
+            {
+              "inv_itm_id": "20569478-f318-4c7b-9d24-0c2b37edb825",
+              "inv_itm_header_id": "20569478-fffb-4248-8b3d-0f56cf2d8835",
+              "inv_itm_qty": 93,
+              "inv_uom": {
+                "unit": "69478"
+              },
+              "inv_net_price": 62218.13,
+              "inv_discount": 0.12,
+              "inv_gst": {
+                "percent": 0.23
+              },
+              "inv_line_itm_net_amount": 41,
+              "inv_line_itm_tax": 528951.22,
+              "inv_line_itm_total": 398042.28,
+              "createdAt": "2008-01-02T00:00:00.000Z",
+              "createdBy": "Simone_Langosh94@example.net",
+              "modifiedAt": "2013-08-12T00:00:00.000Z",
+              "modifiedBy": "Donavon.Yundt@example.org"
+            }
+          ],
+          "to_materialmaster": {
+            "mm_id": "29002502-fac6-4b5d-8e3f-d145adc20fca"
+          },
+          "createdAt": "2011-10-04T00:00:00.000Z",
+          "createdBy": "Stephon44@example.net",
+          "modifiedAt": "2014-01-17T00:00:00.000Z",
+          "modifiedBy": "Bailee1@example.org"
+        },
+        {
+          "po_item_id": "19906196-2aeb-42b5-9395-4ee8bf2ceb3e",
+          "po_line_itm_no": "itm_no-19906196",
+          "po_itm_material_id": "19906196-46cb-42db-84fd-3e7be52f6356",
+          "po_itm_desc": "po_itm_desc-19906196",
+          "po_itm_quantiy": 88,
+          "po_uom": {
+            "unit": "06196"
+          },
+          "po_net_price": 893496.28,
+          "po_itm_dicount": 0.18,
+          "po_itm_gst": {
+            "percent": 0.13
+          },
+          "po_line_itm_net_value": 181938.12,
+          "po_itm_received_qty": 27,
+          "po_itm_open_qty": 47,
+          "po_itm_status": "FullyReceived",
+          "to_gr_item": [
+            {
+              "gr_item_id": "30185536-3ee5-4267-a86a-779341f835b9",
+              "gr_itm_header_id": "30185536-0835-471f-bf80-736119845974",
+              "gr_itm_received_qty": 97,
+              "gr_itm_uom": {
+                "unit": "85536"
+              },
+              "gr_itm_batch_no": 20,
+              "gr_remarks": "gr_remarks-30185536",
+              "createdAt": "2019-10-17T00:00:00.000Z",
+              "createdBy": "Jameson13@example.com",
+              "modifiedAt": "2021-12-11T00:00:00.000Z",
+              "modifiedBy": "Jeramie69@example.com"
+            }
+          ],
+          "to_inv_item": [
+            {
+              "inv_itm_id": "18297786-2f1f-4c07-926c-754e0623e16a",
+              "inv_itm_header_id": "18297786-dfb9-479a-b886-7d52335d1d43",
+              "inv_itm_qty": 75,
+              "inv_uom": {
+                "unit": "97786"
+              },
+              "inv_net_price": 142224.84,
+              "inv_discount": 0.3,
+              "inv_gst": {
+                "percent": 0.16
+              },
+              "inv_line_itm_net_amount": 67,
+              "inv_line_itm_tax": 673612.21,
+              "inv_line_itm_total": 371328.13,
+              "createdAt": "2019-05-16T00:00:00.000Z",
+              "createdBy": "Fatima_Boehm@example.com",
+              "modifiedAt": "2022-04-24T00:00:00.000Z",
+              "modifiedBy": "Haleigh_Lind50@example.net"
+            }
+          ],
+          "to_materialmaster": {
+            "mm_id": "29002502-fac6-4b5d-8e3f-d145adc20fca"
+          },
+          "createdAt": "2007-02-23T00:00:00.000Z",
+          "createdBy": "Omer20@example.com",
+          "modifiedAt": "2007-11-25T00:00:00.000Z",
+          "modifiedBy": "Esta58@example.com"
+        }
+      ],
+      "to_inv_header": [
+        {
+          "inv_id": "30531775-f66a-45ff-84cf-a6cbdf12e234",
+          "inv_no": 26,
+          "inv_vender_id": "30531775-08e3-4fa0-98b8-6ac6b6a946bc",
+          "inv_gr_header_id": "30531775-0459-4ca3-b92b-ff28ffdf59f6",
+          "inv_date": "2011-12-26",
+          "inv_post_date": "2015-12-19",
+          "inv_currency": {
+            "code": "728"
+          },
+          "inv_total_before_tax": 440437.11,
+          "inv_total_amount": 462755.87,
+          "inv_status": "Draft",
+          "inv_verified_posted_managed": {
+            "postedBy": "postedBy-30531775",
+            "postedAt": "2003-04-17T00:00:00.000Z",
+            "verifiedBy": "verifiedBy-30531775",
+            "verifiedAt": "2011-05-31T00:00:00.000Z"
+          },
+          "inv_rejection_remarks": "inv_rejection_remarks-30531775",
+          "to_inv_items": [
+            {
+              "inv_itm_id": "1527126e-bc7a-4f66-a720-296158d9513a",
+              "inv_po_itm_id": "1527126a-9bf1-450a-a9a3-0ff2c3dbe4b1",
+              "inv_itm_qty": 87,
+              "inv_uom": {
+                "unit": "27126"
+              },
+              "inv_net_price": 806233.41,
+              "inv_discount": 0.17,
+              "inv_gst": {
+                "percent": 0.18
+              },
+              "inv_line_itm_net_amount": 26,
+              "inv_line_itm_tax": 454269.14,
+              "inv_line_itm_total": 963576.32,
+              "createdAt": "2000-04-20T00:00:00.000Z",
+              "createdBy": "Theron.Braun61@example.net",
+              "modifiedAt": "2023-04-22T00:00:00.000Z",
+              "modifiedBy": "Pierre.Feeney72@example.com"
+            },
+            {
+              "inv_itm_id": "15271270-7aaf-429e-9942-2cae71614ae3",
+              "inv_po_itm_id": "1527127f-539d-496f-96a3-61b50f87f839",
+              "inv_itm_qty": 46,
+              "inv_uom": {
+                "unit": "27127"
+              },
+              "inv_net_price": 781056.29,
+              "inv_discount": 0.27,
+              "inv_gst": {
+                "percent": 0.36
+              },
+              "inv_line_itm_net_amount": 0,
+              "inv_line_itm_tax": 300074.26,
+              "inv_line_itm_total": 937260.69,
+              "createdAt": "2012-01-17T00:00:00.000Z",
+              "createdBy": "Humberto_Rosenbaum@example.com",
+              "modifiedAt": "2007-12-12T00:00:00.000Z",
+              "modifiedBy": "Lupe60@example.net"
+            }
+          ],
+          "to_vendor": {
+            "vm_id": "11744836-1aee-4197-9df0-92a047f644ae"
+          },
+          "createdAt": "2023-08-05T00:00:00.000Z",
+          "createdBy": "Shania_Adams@example.org",
+          "modifiedAt": "2006-11-30T00:00:00.000Z",
+          "modifiedBy": "Dameon61@example.com"
+        }
+      ],
+      "to_gr_header": [
+        {
+          "gr_id": "656431aa-8ca0-4b37-b57d-41cbe06eab7e",
+          "gr_number": 81,
+          "gr_date": "2022-06-02",
+          "gr_store_loc": {
+            "vm_street": "vm_street-656431",
+            "vm_city": "vm_city-656431",
+            "vm_state": "vm_state-656431",
+            "vm_country": "vm_country-656431",
+            "vm_postal": "656431"
+          },
+          "gr_status": "Posted",
+          "to_gr_item": [
+            {
+              "gr_item_id": "13433053-d6f3-471f-907c-278854d8ef63",
+              "gr_itm_poitem_id": "13433053-3b5a-4dfe-ba5f-d63b4e769fb3",
+              "gr_itm_received_qty": 20,
+              "gr_itm_uom": {
+                "unit": "33053"
+              },
+              "gr_itm_batch_no": 96,
+              "gr_remarks": "gr_remarks-13433053",
+              "createdAt": "2010-10-23T00:00:00.000Z",
+              "createdBy": "Orpha.Volkman30@example.org",
+              "modifiedAt": "2015-10-28T00:00:00.000Z",
+              "modifiedBy": "Isom.Kub@example.org"
+            },
+            {
+              "gr_item_id": "13433054-ddc4-4422-8cfd-51f9e7b6d5ea",
+              "gr_itm_poitem_id": "13433054-445d-4b89-93c6-42c233c2f12d",
+              "gr_itm_received_qty": 42,
+              "gr_itm_uom": {
+                "unit": "33054"
+              },
+              "gr_itm_batch_no": 18,
+              "gr_remarks": "gr_remarks-13433054",
+              "createdAt": "2009-04-14T00:00:00.000Z",
+              "createdBy": "Cassie.Flatley@example.org",
+              "modifiedAt": "2017-07-18T00:00:00.000Z",
+              "modifiedBy": "Dariana9@example.org"
+            }
+          ],
+          "createdAt": "2023-11-26T00:00:00.000Z",
+          "createdBy": "Keshaun19@example.net",
+          "modifiedAt": "2023-04-25T00:00:00.000Z",
+          "modifiedBy": "Jalyn38@example.net"
+        },
+        {
+          "gr_id": "65643241-6c85-4b41-86b2-827001e71fa1",
+          "gr_number": 23,
+          "gr_date": "2010-07-07",
+          "gr_store_loc": {
+            "vm_street": "vm_street-656432",
+            "vm_city": "vm_city-656432",
+            "vm_state": "vm_state-656432",
+            "vm_country": "vm_country-656432",
+            "vm_postal": "656432"
+          },
+          "gr_status": "Draft",
+          "to_gr_item": [
+            {
+              "gr_item_id": "19153400-3569-4371-99af-9886b376f429",
+              "gr_itm_poitem_id": "19153400-35d6-47d0-bda3-dcbba57888ff",
+              "gr_itm_received_qty": 59,
+              "gr_itm_uom": {
+                "unit": "53400"
+              },
+              "gr_itm_batch_no": 3,
+              "gr_remarks": "gr_remarks-19153400",
+              "createdAt": "2014-04-04T00:00:00.000Z",
+              "createdBy": "Timmothy.Dicki69@example.com",
+              "modifiedAt": "2006-05-10T00:00:00.000Z",
+              "modifiedBy": "Vince98@example.org"
+            },
+            {
+              "gr_item_id": "19153401-54bc-439d-a2af-be78782005cf",
+              "gr_itm_poitem_id": "19153401-81d6-4022-b153-c51d5f4d36b4",
+              "gr_itm_received_qty": 24,
+              "gr_itm_uom": {
+                "unit": "53401"
+              },
+              "gr_itm_batch_no": 0,
+              "gr_remarks": "gr_remarks-19153401",
+              "createdAt": "2005-02-14T00:00:00.000Z",
+              "createdBy": "Henri60@example.net",
+              "modifiedAt": "2017-10-08T00:00:00.000Z",
+              "modifiedBy": "Dallin.McLaughlin95@example.org"
+            }
+          ],
+          "createdAt": "2009-12-16T00:00:00.000Z",
+          "createdBy": "Noble_Bogan80@example.org",
+          "modifiedAt": "2003-02-12T00:00:00.000Z",
+          "modifiedBy": "Melissa56@example.net"
+        }
+      ],
+      "to_vendor": {
+        "vm_id": "11744836-1aee-4197-9df0-92a047f644ae"
+      },
+      "createdAt": "2014-06-08T00:00:00.000Z",
+      "createdBy": "Humberto25@example.com",
+      "modifiedAt": "2003-03-04T00:00:00.000Z",
+      "modifiedBy": "Isabell.Olson@example.net"
+    },
+    {
+      "po_id": "12550294-2a2d-4f82-91fe-bdafd9ea7d45",
+      "po_number": 66,
+      "po_coco": "50294",
+      "po_org": "50294",
+      "po_curr": {
+        "code": "728"
+      },
+      "po_doc_date": "2003-04-24",
+      "po_delivery_date": "2021-12-02",
+      "po_payment_terms": "45 Days",
+      "total_po_value": 141856.18,
+      "po_status": "Approved",
+      "po_approvalstatus": {
+        "ApprovalBy": "ApprovalBy-12550294",
+        "ApprovedAt": "2023-11-30T00:00:00.000Z"
+      },
+      "po_remarks": "po_remarks-12550294",
+      "to_po_items": [
+        {
+          "po_item_id": "20385352-22e2-4d17-be35-f15df3d9bf6f",
+          "po_line_itm_no": "itm_no-20385352",
+          "po_itm_material_id": "20385352-9747-421d-97c2-69f334636170",
+          "po_itm_desc": "po_itm_desc-20385352",
+          "po_itm_quantiy": 81,
+          "po_uom": {
+            "unit": "85352"
+          },
+          "po_net_price": 346426.15,
+          "po_itm_dicount": 0.27,
+          "po_itm_gst": {
+            "percent": 0.21
+          },
+          "po_line_itm_net_value": 973259.32,
+          "po_itm_received_qty": 74,
+          "po_itm_open_qty": 42,
+          "po_itm_status": "Cancelled",
+          "to_gr_item": [
+            {
+              "gr_item_id": "11557979-28b2-4fc0-af22-91460639bcf3",
+              "gr_itm_header_id": "11557979-382e-4b8b-9c1c-69d13345d960",
+              "gr_itm_received_qty": 39,
+              "gr_itm_uom": {
+                "unit": "57979"
+              },
+              "gr_itm_batch_no": 17,
+              "gr_remarks": "gr_remarks-11557979",
+              "createdAt": "2015-05-02T00:00:00.000Z",
+              "createdBy": "Pietro.Armstrong@example.com",
+              "modifiedAt": "2005-05-21T00:00:00.000Z",
+              "modifiedBy": "Ericka.Blick@example.org"
+            }
+          ],
+          "to_inv_item": [
+            {
+              "inv_itm_id": "16986107-beff-4628-a1ad-3f32ce59c53b",
+              "inv_itm_header_id": "16986107-5c9c-4fc4-85b6-4f030ffd3b40",
+              "inv_itm_qty": 28,
+              "inv_uom": {
+                "unit": "86107"
+              },
+              "inv_net_price": 178821.11,
+              "inv_discount": 0.21,
+              "inv_gst": {
+                "percent": 0.87
+              },
+              "inv_line_itm_net_amount": 21,
+              "inv_line_itm_tax": 531743.21,
+              "inv_line_itm_total": 59583.31,
+              "createdAt": "2022-10-26T00:00:00.000Z",
+              "createdBy": "Mack_Durgan@example.com",
+              "modifiedAt": "2023-02-05T00:00:00.000Z",
+              "modifiedBy": "Sterling_Hauck7@example.com"
+            }
+          ],
+          "to_materialmaster": {
+            "mm_id": "29002502-fac6-4b5d-8e3f-d145adc20fca"
+          },
+          "createdAt": "2011-08-05T00:00:00.000Z",
+          "createdBy": "Joelle2@example.org",
+          "modifiedAt": "2023-07-28T00:00:00.000Z",
+          "modifiedBy": "Cathrine36@example.org"
+        },
+        {
+          "po_item_id": "20385353-62cc-4805-ac4b-f6bc58a371fa",
+          "po_line_itm_no": "itm_no-20385353",
+          "po_itm_material_id": "20385353-d9dc-4431-b70e-d964de07dc9a",
+          "po_itm_desc": "po_itm_desc-20385353",
+          "po_itm_quantiy": 24,
+          "po_uom": {
+            "unit": "85353"
+          },
+          "po_net_price": 100273.13,
+          "po_itm_dicount": 0.25,
+          "po_itm_gst": {
+            "percent": 0.21
+          },
+          "po_line_itm_net_value": 747378.3,
+          "po_itm_received_qty": 96,
+          "po_itm_open_qty": 79,
+          "po_itm_status": "Open",
+          "to_gr_item": [
+            {
+              "gr_item_id": "22773368-65f8-40cd-8030-8d1852024bd5",
+              "gr_itm_header_id": "22773368-8d29-4489-ba75-a79744301e63",
+              "gr_itm_received_qty": 4,
+              "gr_itm_uom": {
+                "unit": "73368"
+              },
+              "gr_itm_batch_no": 0,
+              "gr_remarks": "gr_remarks-22773368",
+              "createdAt": "2007-08-15T00:00:00.000Z",
+              "createdBy": "Lilla_Cummings@example.com",
+              "modifiedAt": "2005-10-01T00:00:00.000Z",
+              "modifiedBy": "Xavier_Murazik20@example.org"
+            }
+          ],
+          "to_inv_item": [
+            {
+              "inv_itm_id": "13241649-ead0-4834-b379-50f5bc062f5c",
+              "inv_itm_header_id": "13241649-41bb-400b-914d-6688fc39bcd1",
+              "inv_itm_qty": 6,
+              "inv_uom": {
+                "unit": "41649"
+              },
+              "inv_net_price": 905492.27,
+              "inv_discount": 0.3,
+              "inv_gst": {
+                "percent": 0.87
+              },
+              "inv_line_itm_net_amount": 49,
+              "inv_line_itm_tax": 747893.28,
+              "inv_line_itm_total": 860490.12,
+              "createdAt": "2012-01-02T00:00:00.000Z",
+              "createdBy": "Sydnee0@example.org",
+              "modifiedAt": "2014-02-19T00:00:00.000Z",
+              "modifiedBy": "Lisa.VonRueden@example.org"
+            }
+          ],
+          "to_materialmaster": {
+            "mm_id": "29002502-fac6-4b5d-8e3f-d145adc20fca"
+          },
+          "createdAt": "2010-11-24T00:00:00.000Z",
+          "createdBy": "Litzy_Kassulke@example.net",
+          "modifiedAt": "2019-02-13T00:00:00.000Z",
+          "modifiedBy": "Shemar12@example.org"
+        }
+      ],
+      "to_inv_header": [
+        {
+          "inv_id": "21861613-01e2-41dc-a8aa-f012ada667fc",
+          "inv_no": 23,
+          "inv_vender_id": "21861613-5ff1-4bcc-936b-f624a2a541d8",
+          "inv_gr_header_id": "21861613-fee1-4415-8d37-7dfd27f0326c",
+          "inv_date": "2004-10-12",
+          "inv_post_date": "2019-09-29",
+          "inv_currency": {
+            "code": "728"
+          },
+          "inv_total_before_tax": 399275.14,
+          "inv_total_amount": 264539.12,
+          "inv_status": "Cancelled",
+          "inv_verified_posted_managed": {
+            "postedBy": "postedBy-21861613",
+            "postedAt": "2022-10-24T00:00:00.000Z",
+            "verifiedBy": "verifiedBy-21861613",
+            "verifiedAt": "2001-04-13T00:00:00.000Z"
+          },
+          "inv_rejection_remarks": "inv_rejection_remarks-21861613",
+          "to_inv_items": [
+            {
+              "inv_itm_id": "60431141-c5d7-4910-a02e-943e966f6b4e",
+              "inv_po_itm_id": "6043114a-ba7f-48f6-b64e-1e2257f5c489",
+              "inv_itm_qty": 18,
+              "inv_uom": {
+                "unit": "43114"
+              },
+              "inv_net_price": 257150.39,
+              "inv_discount": 0.58,
+              "inv_gst": {
+                "percent": 0.13
+              },
+              "inv_line_itm_net_amount": 30,
+              "inv_line_itm_tax": 333856.24,
+              "inv_line_itm_total": 604952.48,
+              "createdAt": "2016-02-08T00:00:00.000Z",
+              "createdBy": "Tressa_Denesik14@example.com",
+              "modifiedAt": "2018-05-05T00:00:00.000Z",
+              "modifiedBy": "Robbie.Botsford57@example.com"
+            },
+            {
+              "inv_itm_id": "60431154-89a3-48c6-93b5-74c21754e8fe",
+              "inv_po_itm_id": "60431154-f40f-435c-accf-9edd14a0c315",
+              "inv_itm_qty": 26,
+              "inv_uom": {
+                "unit": "43115"
+              },
+              "inv_net_price": 717717.21,
+              "inv_discount": 0.3,
+              "inv_gst": {
+                "percent": 0.29
+              },
+              "inv_line_itm_net_amount": 64,
+              "inv_line_itm_tax": 784178.7,
+              "inv_line_itm_total": 880498.21,
+              "createdAt": "2019-10-03T00:00:00.000Z",
+              "createdBy": "Annie.Blick@example.net",
+              "modifiedAt": "2023-11-21T00:00:00.000Z",
+              "modifiedBy": "Thurman.Denesik@example.com"
+            }
+          ],
+          "to_vendor": {
+            "vm_id": "11744836-1aee-4197-9df0-92a047f644ae"
+          },
+          "createdAt": "2006-11-16T00:00:00.000Z",
+          "createdBy": "Karlie_Barrows1@example.com",
+          "modifiedAt": "2021-04-19T00:00:00.000Z",
+          "modifiedBy": "Sandrine_Nitzsche65@example.org"
+        }
+      ],
+      "to_gr_header": [
+        {
+          "gr_id": "9358649a-b537-43d1-b597-a6b268dc0894",
+          "gr_number": 81,
+          "gr_date": "2022-01-12",
+          "gr_store_loc": {
+            "vm_street": "vm_street-9358649",
+            "vm_city": "vm_city-9358649",
+            "vm_state": "vm_state-9358649",
+            "vm_country": "vm_country-9358649",
+            "vm_postal": "358649"
+          },
+          "gr_status": "Posted",
+          "to_gr_item": [
+            {
+              "gr_item_id": "20534205-0e5a-4fea-bb32-01cc67956299",
+              "gr_itm_poitem_id": "20534205-46cf-44d6-ba1b-262e5c700e0a",
+              "gr_itm_received_qty": 78,
+              "gr_itm_uom": {
+                "unit": "34205"
+              },
+              "gr_itm_batch_no": 64,
+              "gr_remarks": "gr_remarks-20534205",
+              "createdAt": "2006-07-13T00:00:00.000Z",
+              "createdBy": "Simone_Crona37@example.com",
+              "modifiedAt": "2016-09-22T00:00:00.000Z",
+              "modifiedBy": "Dulce_Mueller@example.net"
+            },
+            {
+              "gr_item_id": "20534206-87bd-4d49-b78b-cf3cb1458da1",
+              "gr_itm_poitem_id": "20534206-6ced-43a7-80d7-782a03f421fb",
+              "gr_itm_received_qty": 20,
+              "gr_itm_uom": {
+                "unit": "34206"
+              },
+              "gr_itm_batch_no": 27,
+              "gr_remarks": "gr_remarks-20534206",
+              "createdAt": "2016-12-27T00:00:00.000Z",
+              "createdBy": "Cecilia_Reynolds@example.org",
+              "modifiedAt": "2016-03-02T00:00:00.000Z",
+              "modifiedBy": "Geraldine99@example.com"
+            }
+          ],
+          "createdAt": "2015-05-10T00:00:00.000Z",
+          "createdBy": "Florida.Sipes-Mraz95@example.org",
+          "modifiedAt": "2015-05-28T00:00:00.000Z",
+          "modifiedBy": "Carmen.Kassulke18@example.net"
+        },
+        {
+          "gr_id": "93586501-a093-4a2a-b2c4-ca3a188f8030",
+          "gr_number": 95,
+          "gr_date": "2021-02-26",
+          "gr_store_loc": {
+            "vm_street": "vm_street-9358650",
+            "vm_city": "vm_city-9358650",
+            "vm_state": "vm_state-9358650",
+            "vm_country": "vm_country-9358650",
+            "vm_postal": "358650"
+          },
+          "gr_status": "Posted",
+          "to_gr_item": [
+            {
+              "gr_item_id": "15786616-bdb0-43c0-955e-59609079fda7",
+              "gr_itm_poitem_id": "15786616-dd89-485d-a872-04c08318c665",
+              "gr_itm_received_qty": 44,
+              "gr_itm_uom": {
+                "unit": "86616"
+              },
+              "gr_itm_batch_no": 10,
+              "gr_remarks": "gr_remarks-15786616",
+              "createdAt": "2020-12-07T00:00:00.000Z",
+              "createdBy": "Una.McDermott-Mertz@example.com",
+              "modifiedAt": "2007-05-09T00:00:00.000Z",
+              "modifiedBy": "Brendan_Langworth@example.net"
+            },
+            {
+              "gr_item_id": "15786617-5b59-4857-ad10-c1a360627e8e",
+              "gr_itm_poitem_id": "15786617-cc1c-485a-bb09-6bab03815e73",
+              "gr_itm_received_qty": 58,
+              "gr_itm_uom": {
+                "unit": "86617"
+              },
+              "gr_itm_batch_no": 37,
+              "gr_remarks": "gr_remarks-15786617",
+              "createdAt": "2015-04-26T00:00:00.000Z",
+              "createdBy": "Coleman98@example.org",
+              "modifiedAt": "2015-06-11T00:00:00.000Z",
+              "modifiedBy": "Maxine37@example.net"
+            }
+          ],
+          "createdAt": "2006-01-24T00:00:00.000Z",
+          "createdBy": "Lee_Gibson@example.net",
+          "modifiedAt": "2003-04-11T00:00:00.000Z",
+          "modifiedBy": "Holly_Schulist99@example.org"
+        }
+      ],
+      "to_vendor": {
+        "vm_id": "11744836-1aee-4197-9df0-92a047f644ae"
+      },
+      "createdAt": "2016-09-25T00:00:00.000Z",
+      "createdBy": "Audreanne54@example.net",
+      "modifiedAt": "2012-02-26T00:00:00.000Z",
+      "modifiedBy": "Damaris.Cremin-Quitzon49@example.net"
+    }
+  ],
+  "to_inv_header": [
+    {
+      "inv_id": "15875380-65ce-4173-8a7b-f7266a12db85",
+      "inv_no": 57,
+      "inv_po_header_id": "15875380-d380-497e-ac54-7129335c4992",
+      "inv_gr_header_id": "15875380-2ccc-4098-b0c4-6cf5cabf6929",
+      "inv_date": "2018-07-13",
+      "inv_post_date": "2009-01-11",
+      "inv_currency": {
+        "code": "728"
+      },
+      "inv_total_before_tax": 157809.97,
+      "inv_total_amount": 132217.2,
+      "inv_status": "Draft",
+      "inv_verified_posted_managed": {
+        "postedBy": "postedBy-15875380",
+        "postedAt": "2010-12-08T00:00:00.000Z",
+        "verifiedBy": "verifiedBy-15875380",
+        "verifiedAt": "2015-08-11T00:00:00.000Z"
+      },
+      "inv_rejection_remarks": "inv_rejection_remarks-15875380",
+      "to_inv_items": [
+        {
+          "inv_itm_id": "10878768-a866-405d-8004-a2edb3c9dca9",
+          "inv_po_itm_id": "10878768-a8c3-4120-b72c-40ba100049ce",
+          "inv_itm_qty": 65,
+          "inv_uom": {
+            "unit": "78768"
+          },
+          "inv_net_price": 421536.2,
+          "inv_discount": 0.43,
+          "inv_gst": {
+            "percent": 0.39
+          },
+          "inv_line_itm_net_amount": 23,
+          "inv_line_itm_tax": 794298.16,
+          "inv_line_itm_total": 430010.52,
+          "createdAt": "2015-08-07T00:00:00.000Z",
+          "createdBy": "Arvilla.Feil-Schamberger@example.net",
+          "modifiedAt": "2017-03-15T00:00:00.000Z",
+          "modifiedBy": "Darion.Kuvalis@example.org"
+        },
+        {
+          "inv_itm_id": "10878769-7972-4cbd-bc71-fe6a71ba52e3",
+          "inv_po_itm_id": "10878769-24b0-4452-b481-d8693efb808f",
+          "inv_itm_qty": 12,
+          "inv_uom": {
+            "unit": "78769"
+          },
+          "inv_net_price": 432041.41,
+          "inv_discount": 0.71,
+          "inv_gst": {
+            "percent": 0.92
+          },
+          "inv_line_itm_net_amount": 46,
+          "inv_line_itm_tax": 703676.92,
+          "inv_line_itm_total": 619294.52,
+          "createdAt": "2018-11-09T00:00:00.000Z",
+          "createdBy": "Wava_Bins@example.net",
+          "modifiedAt": "2019-09-11T00:00:00.000Z",
+          "modifiedBy": "Layla_Weimann77@example.org"
+        }
+      ],
+      "to_vendor": {
+        "vm_id": "11744836-1aee-4197-9df0-92a047f644ae"
+      },
+      "createdAt": "2000-10-13T00:00:00.000Z",
+      "createdBy": "Cloyd.Ferry4@example.net",
+      "modifiedAt": "2015-12-10T00:00:00.000Z",
+      "modifiedBy": "Brandi_Gutkowski@example.org"
+    },
+    {
+      "inv_id": "15875381-c8d3-4e00-9a3b-89adfd6c4ec1",
+      "inv_no": 66,
+      "inv_po_header_id": "15875381-c6e0-45c5-b6ea-13b8409bfd63",
+      "inv_gr_header_id": "15875381-e015-4b0a-bf92-3ed82fa6e0d4",
+      "inv_date": "2004-01-24",
+      "inv_post_date": "2014-04-10",
+      "inv_currency": {
+        "code": "728"
+      },
+      "inv_total_before_tax": 434498.55,
+      "inv_total_amount": 938628.11,
+      "inv_status": "Cancelled",
+      "inv_verified_posted_managed": {
+        "postedBy": "postedBy-15875381",
+        "postedAt": "2000-08-24T00:00:00.000Z",
+        "verifiedBy": "verifiedBy-15875381",
+        "verifiedAt": "2020-09-11T00:00:00.000Z"
+      },
+      "inv_rejection_remarks": "inv_rejection_remarks-15875381",
+      "to_inv_items": [
+        {
+          "inv_itm_id": "10486245-b4b8-4fcd-931c-b21546eff2fe",
+          "inv_po_itm_id": "10486245-01cc-480f-8b06-3a3dad609337",
+          "inv_itm_qty": 72,
+          "inv_uom": {
+            "unit": "86245"
+          },
+          "inv_net_price": 849827.16,
+          "inv_discount": 0.27,
+          "inv_gst": {
+            "percent": 0.69
+          },
+          "inv_line_itm_net_amount": 67,
+          "inv_line_itm_tax": 850316.62,
+          "inv_line_itm_total": 339974.78,
+          "createdAt": "2005-07-03T00:00:00.000Z",
+          "createdBy": "Daron_Raynor55@example.com",
+          "modifiedAt": "2023-10-21T00:00:00.000Z",
+          "modifiedBy": "Adriana_Schuster62@example.com"
+        },
+        {
+          "inv_itm_id": "10486246-e671-408b-a148-53d1d19e7b5d",
+          "inv_po_itm_id": "10486246-1171-4f11-858d-acf9fa740c81",
+          "inv_itm_qty": 69,
+          "inv_uom": {
+            "unit": "86246"
+          },
+          "inv_net_price": 515791.31,
+          "inv_discount": 0.3,
+          "inv_gst": {
+            "percent": 0.27
+          },
+          "inv_line_itm_net_amount": 79,
+          "inv_line_itm_tax": 192189.17,
+          "inv_line_itm_total": 150908.19,
+          "createdAt": "2012-07-17T00:00:00.000Z",
+          "createdBy": "Hilda63@example.net",
+          "modifiedAt": "2003-02-17T00:00:00.000Z",
+          "modifiedBy": "Zora52@example.com"
+        }
+      ],
+      "to_vendor": {
+        "vm_id": "11744836-1aee-4197-9df0-92a047f644ae"
+      },
+      "createdAt": "2015-07-23T00:00:00.000Z",
+      "createdBy": "Hassan.Grady@example.net",
+      "modifiedAt": "2007-11-28T00:00:00.000Z",
+      "modifiedBy": "Electa_Schmeler72@example.net"
+    }
+  ],
+  "createdAt": "2006-02-26T00:00:00.000Z",
+  "createdBy": "Karine.Huels@example.com",
+  "modifiedAt": "2017-04-28T00:00:00.000Z",
+  "modifiedBy": "Landen_Hauck@example.net"
+}
+
+
+### VendorMaster
+# @name VendorMaster_DELETE
+DELETE {{server}}/odata/v4/master-data/VendorMaster/11744836-1aee-4197-9df0-92a047f644ae
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### Currencies
+# @name Currencies_GET
+GET {{server}}/odata/v4/master-data/Currencies
+Authorization: Basic {{username}}:{{password}}
+
+
+### MaterialMaster
+# @name MaterialMaster_GET
+GET {{server}}/odata/v4/master-data/MaterialMaster
+Authorization: Basic {{username}}:{{password}}
+
+
+### MaterialMaster
+# @name MaterialMaster_POST
+POST {{server}}/odata/v4/master-data/MaterialMaster
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "mm_id": "29002502-fac6-4b5d-8e3f-d145adc20fca",
+  "mm_code": "mm_code-2900250",
+  "mm_desc": "mm_desc-2900250",
+  "mm_type": "RawMaterial",
+  "mm_uom": {
+    "unit": "00250"
+  },
+  "mm_stdprice": 8,
+  "mm_gst": {
+    "percent": 0.3
+  },
+  "mm_is_active": "0",
+  "to_po_items": [
+    {
+      "po_item_id": "25077465-b71c-4547-a383-bb8281fb7fa2",
+      "po_itm_header_id": "25077465-4640-4c8e-9e99-8880bdd1e687",
+      "po_line_itm_no": "itm_no-25077465",
+      "po_itm_desc": "po_itm_desc-25077465",
+      "po_itm_quantiy": 58,
+      "po_uom": {
+        "unit": "77465"
+      },
+      "po_net_price": 971987.28,
+      "po_itm_dicount": 0.2,
+      "po_itm_gst": {
+        "percent": 0.99
+      },
+      "po_line_itm_net_value": 656875.26,
+      "po_itm_received_qty": 83,
+      "po_itm_open_qty": 84,
+      "po_itm_status": "PartiallyReceived",
+      "to_gr_item": [
+        {
+          "gr_item_id": "19222707-4f9b-4148-b3d3-a68c2ad387ef",
+          "gr_itm_header_id": "19222707-672c-454e-8801-2ecb5f10e0bd",
+          "gr_itm_received_qty": 16,
+          "gr_itm_uom": {
+            "unit": "22707"
+          },
+          "gr_itm_batch_no": 59,
+          "gr_remarks": "gr_remarks-19222707",
+          "createdAt": "2019-05-24T00:00:00.000Z",
+          "createdBy": "Eloise_Reinger-Weimann@example.org",
+          "modifiedAt": "2005-03-13T00:00:00.000Z",
+          "modifiedBy": "Marion61@example.org"
+        }
+      ],
+      "to_inv_item": [
+        {
+          "inv_itm_id": "18480965-5e5d-4764-a17c-7fd957b07fa2",
+          "inv_itm_header_id": "18480965-a5af-4293-99bf-84120984b79c",
+          "inv_itm_qty": 71,
+          "inv_uom": {
+            "unit": "80965"
+          },
+          "inv_net_price": 912210.2,
+          "inv_discount": 0.29,
+          "inv_gst": {
+            "percent": 0.31
+          },
+          "inv_line_itm_net_amount": 96,
+          "inv_line_itm_tax": 421080.23,
+          "inv_line_itm_total": 913070.29,
+          "createdAt": "2023-01-09T00:00:00.000Z",
+          "createdBy": "Marques_Yost-Cruickshank7@example.org",
+          "modifiedAt": "2010-08-28T00:00:00.000Z",
+          "modifiedBy": "Lavern.Stracke@example.com"
+        }
+      ],
+      "to_materialmaster": {
+        "mm_id": "29002502-fac6-4b5d-8e3f-d145adc20fca"
+      },
+      "createdAt": "2017-12-18T00:00:00.000Z",
+      "createdBy": "Jovan_Kunze6@example.net",
+      "modifiedAt": "2008-10-20T00:00:00.000Z",
+      "modifiedBy": "Kirstin_Ratke88@example.net"
+    },
+    {
+      "po_item_id": "25077466-ccc7-4ef6-bf98-b45eb2e10193",
+      "po_itm_header_id": "25077466-1789-4a7f-b110-bc23fb1d6d36",
+      "po_line_itm_no": "itm_no-25077466",
+      "po_itm_desc": "po_itm_desc-25077466",
+      "po_itm_quantiy": 62,
+      "po_uom": {
+        "unit": "77466"
+      },
+      "po_net_price": 85946.25,
+      "po_itm_dicount": 0.29,
+      "po_itm_gst": {
+        "percent": 0.29
+      },
+      "po_line_itm_net_value": 789213.21,
+      "po_itm_received_qty": 62,
+      "po_itm_open_qty": 56,
+      "po_itm_status": "Cancelled",
+      "to_gr_item": [
+        {
+          "gr_item_id": "12955465-f980-428a-a6d4-01cf64c90f10",
+          "gr_itm_header_id": "12955465-aeef-46d9-9320-556bbfac8028",
+          "gr_itm_received_qty": 69,
+          "gr_itm_uom": {
+            "unit": "55465"
+          },
+          "gr_itm_batch_no": 57,
+          "gr_remarks": "gr_remarks-12955465",
+          "createdAt": "2018-11-17T00:00:00.000Z",
+          "createdBy": "Judson.Brakus@example.com",
+          "modifiedAt": "2005-08-06T00:00:00.000Z",
+          "modifiedBy": "Luciano_Walker65@example.com"
+        }
+      ],
+      "to_inv_item": [
+        {
+          "inv_itm_id": "11400024-426f-450e-88dd-3c0ebece40f6",
+          "inv_itm_header_id": "11400024-ce55-449c-a878-a5b857244b73",
+          "inv_itm_qty": 53,
+          "inv_uom": {
+            "unit": "00024"
+          },
+          "inv_net_price": 907731.31,
+          "inv_discount": 0.22,
+          "inv_gst": {
+            "percent": 0.11
+          },
+          "inv_line_itm_net_amount": 52,
+          "inv_line_itm_tax": 676451.12,
+          "inv_line_itm_total": 619504.32,
+          "createdAt": "2000-04-11T00:00:00.000Z",
+          "createdBy": "Amina41@example.org",
+          "modifiedAt": "2017-02-27T00:00:00.000Z",
+          "modifiedBy": "Carrie_Koch@example.com"
+        }
+      ],
+      "to_materialmaster": {
+        "mm_id": "29002502-fac6-4b5d-8e3f-d145adc20fca"
+      },
+      "createdAt": "2003-11-12T00:00:00.000Z",
+      "createdBy": "Dane69@example.org",
+      "modifiedAt": "2009-04-16T00:00:00.000Z",
+      "modifiedBy": "Saige45@example.net"
+    }
+  ],
+  "createdAt": "2008-09-20T00:00:00.000Z",
+  "createdBy": "Fernando93@example.com",
+  "modifiedAt": "2000-02-06T00:00:00.000Z",
+  "modifiedBy": "Carlo.Runolfsson@example.org"
+}
+
+
+### MaterialMaster
+# @name MaterialMaster_PATCH
+PATCH {{server}}/odata/v4/master-data/MaterialMaster/29002502-fac6-4b5d-8e3f-d145adc20fca
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "mm_id": "29002502-fac6-4b5d-8e3f-d145adc20fca",
+  "mm_code": "mm_code-2900250",
+  "mm_desc": "mm_desc-2900250",
+  "mm_type": "RawMaterial",
+  "mm_uom": {
+    "unit": "00250"
+  },
+  "mm_stdprice": 8,
+  "mm_gst": {
+    "percent": 0.3
+  },
+  "mm_is_active": "0",
+  "to_po_items": [
+    {
+      "po_item_id": "25077465-b71c-4547-a383-bb8281fb7fa2",
+      "po_itm_header_id": "25077465-4640-4c8e-9e99-8880bdd1e687",
+      "po_line_itm_no": "itm_no-25077465",
+      "po_itm_desc": "po_itm_desc-25077465",
+      "po_itm_quantiy": 58,
+      "po_uom": {
+        "unit": "77465"
+      },
+      "po_net_price": 971987.28,
+      "po_itm_dicount": 0.2,
+      "po_itm_gst": {
+        "percent": 0.99
+      },
+      "po_line_itm_net_value": 656875.26,
+      "po_itm_received_qty": 83,
+      "po_itm_open_qty": 84,
+      "po_itm_status": "PartiallyReceived",
+      "to_gr_item": [
+        {
+          "gr_item_id": "19222707-4f9b-4148-b3d3-a68c2ad387ef",
+          "gr_itm_header_id": "19222707-672c-454e-8801-2ecb5f10e0bd",
+          "gr_itm_received_qty": 16,
+          "gr_itm_uom": {
+            "unit": "22707"
+          },
+          "gr_itm_batch_no": 59,
+          "gr_remarks": "gr_remarks-19222707",
+          "createdAt": "2019-05-24T00:00:00.000Z",
+          "createdBy": "Eloise_Reinger-Weimann@example.org",
+          "modifiedAt": "2005-03-13T00:00:00.000Z",
+          "modifiedBy": "Marion61@example.org"
+        }
+      ],
+      "to_inv_item": [
+        {
+          "inv_itm_id": "18480965-5e5d-4764-a17c-7fd957b07fa2",
+          "inv_itm_header_id": "18480965-a5af-4293-99bf-84120984b79c",
+          "inv_itm_qty": 71,
+          "inv_uom": {
+            "unit": "80965"
+          },
+          "inv_net_price": 912210.2,
+          "inv_discount": 0.29,
+          "inv_gst": {
+            "percent": 0.31
+          },
+          "inv_line_itm_net_amount": 96,
+          "inv_line_itm_tax": 421080.23,
+          "inv_line_itm_total": 913070.29,
+          "createdAt": "2023-01-09T00:00:00.000Z",
+          "createdBy": "Marques_Yost-Cruickshank7@example.org",
+          "modifiedAt": "2010-08-28T00:00:00.000Z",
+          "modifiedBy": "Lavern.Stracke@example.com"
+        }
+      ],
+      "to_materialmaster": {
+        "mm_id": "29002502-fac6-4b5d-8e3f-d145adc20fca"
+      },
+      "createdAt": "2017-12-18T00:00:00.000Z",
+      "createdBy": "Jovan_Kunze6@example.net",
+      "modifiedAt": "2008-10-20T00:00:00.000Z",
+      "modifiedBy": "Kirstin_Ratke88@example.net"
+    },
+    {
+      "po_item_id": "25077466-ccc7-4ef6-bf98-b45eb2e10193",
+      "po_itm_header_id": "25077466-1789-4a7f-b110-bc23fb1d6d36",
+      "po_line_itm_no": "itm_no-25077466",
+      "po_itm_desc": "po_itm_desc-25077466",
+      "po_itm_quantiy": 62,
+      "po_uom": {
+        "unit": "77466"
+      },
+      "po_net_price": 85946.25,
+      "po_itm_dicount": 0.29,
+      "po_itm_gst": {
+        "percent": 0.29
+      },
+      "po_line_itm_net_value": 789213.21,
+      "po_itm_received_qty": 62,
+      "po_itm_open_qty": 56,
+      "po_itm_status": "Cancelled",
+      "to_gr_item": [
+        {
+          "gr_item_id": "12955465-f980-428a-a6d4-01cf64c90f10",
+          "gr_itm_header_id": "12955465-aeef-46d9-9320-556bbfac8028",
+          "gr_itm_received_qty": 69,
+          "gr_itm_uom": {
+            "unit": "55465"
+          },
+          "gr_itm_batch_no": 57,
+          "gr_remarks": "gr_remarks-12955465",
+          "createdAt": "2018-11-17T00:00:00.000Z",
+          "createdBy": "Judson.Brakus@example.com",
+          "modifiedAt": "2005-08-06T00:00:00.000Z",
+          "modifiedBy": "Luciano_Walker65@example.com"
+        }
+      ],
+      "to_inv_item": [
+        {
+          "inv_itm_id": "11400024-426f-450e-88dd-3c0ebece40f6",
+          "inv_itm_header_id": "11400024-ce55-449c-a878-a5b857244b73",
+          "inv_itm_qty": 53,
+          "inv_uom": {
+            "unit": "00024"
+          },
+          "inv_net_price": 907731.31,
+          "inv_discount": 0.22,
+          "inv_gst": {
+            "percent": 0.11
+          },
+          "inv_line_itm_net_amount": 52,
+          "inv_line_itm_tax": 676451.12,
+          "inv_line_itm_total": 619504.32,
+          "createdAt": "2000-04-11T00:00:00.000Z",
+          "createdBy": "Amina41@example.org",
+          "modifiedAt": "2017-02-27T00:00:00.000Z",
+          "modifiedBy": "Carrie_Koch@example.com"
+        }
+      ],
+      "to_materialmaster": {
+        "mm_id": "29002502-fac6-4b5d-8e3f-d145adc20fca"
+      },
+      "createdAt": "2003-11-12T00:00:00.000Z",
+      "createdBy": "Dane69@example.org",
+      "modifiedAt": "2009-04-16T00:00:00.000Z",
+      "modifiedBy": "Saige45@example.net"
+    }
+  ],
+  "createdAt": "2008-09-20T00:00:00.000Z",
+  "createdBy": "Fernando93@example.com",
+  "modifiedAt": "2000-02-06T00:00:00.000Z",
+  "modifiedBy": "Carlo.Runolfsson@example.org"
+}
+
+
+### MaterialMaster
+# @name MaterialMaster_DELETE
+DELETE {{server}}/odata/v4/master-data/MaterialMaster/29002502-fac6-4b5d-8e3f-d145adc20fca
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}

@@ -1,11 +1,13 @@
 using {po.ust as db} from '../db/Schema';
 
-define service MasterData @(path : 'masterdata') {
+define service MasterData {
+    @odata.draft.enabled
     entity VendorMaster as projection on db.VendorMaster;
     entity MaterialMaster as projection on db.MaterialMaster;
 }
 
-define service PurchaseOrderManagement @(path : 'POManagement') {
+define service PurchaseOrderManagement{
+    @odata.draft.enabled: true
     entity POHeader as projection on db.POHeader;
     entity POItems as projection on db.POItems;
 }

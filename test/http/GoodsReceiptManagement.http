@@ -1,0 +1,209 @@
+@server=http://localhost:4004
+@username=alice
+@password=
+
+
+### GRHeader
+# @name GRHeader_GET
+GET {{server}}/odata/v4/GRManagement/GRHeader
+Authorization: Basic {{username}}:{{password}}
+
+
+### GRHeader
+# @name GRHeader_POST
+POST {{server}}/odata/v4/GRManagement/GRHeader
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "gr_id": "21297090-1ced-4763-82f6-18efb0f38237",
+  "gr_number": 69,
+  "gr_po_header_id": "21297090-fcbb-4715-a83a-d5cf62f5859d",
+  "gr_date": "2023-05-03",
+  "gr_store_loc": {
+    "vm_street": "vm_street-21297090",
+    "vm_city": "vm_city-21297090",
+    "vm_state": "vm_state-21297090",
+    "vm_country": "vm_country-21297090",
+    "vm_postal": "297090"
+  },
+  "gr_status": "Posted",
+  "to_gr_item": [
+    {
+      "gr_item_id": "21679294-556f-41fb-8e27-d9d14c8b4bb6",
+      "gr_itm_poitem_id": "21679294-25fe-4d82-8b5f-af3b7e18b7ac",
+      "gr_itm_received_qty": 15,
+      "gr_itm_uom": {
+        "unit": "79294"
+      },
+      "gr_itm_batch_no": 4,
+      "gr_remarks": "gr_remarks-21679294",
+      "to_gr_header": {
+        "gr_id": "21297090-1ced-4763-82f6-18efb0f38237"
+      },
+      "createdAt": "2012-12-09T00:00:00.000Z",
+      "createdBy": "Antoinette.Armstrong@example.com",
+      "modifiedAt": "2011-06-19T00:00:00.000Z",
+      "modifiedBy": "Zack.Schulist7@example.net"
+    },
+    {
+      "gr_item_id": "21679295-d071-403c-97bb-f6ba9b18fa5a",
+      "gr_itm_poitem_id": "21679295-bebd-44ff-b086-4f4b6e9abaed",
+      "gr_itm_received_qty": 95,
+      "gr_itm_uom": {
+        "unit": "79295"
+      },
+      "gr_itm_batch_no": 7,
+      "gr_remarks": "gr_remarks-21679295",
+      "to_gr_header": {
+        "gr_id": "21297090-1ced-4763-82f6-18efb0f38237"
+      },
+      "createdAt": "2003-06-28T00:00:00.000Z",
+      "createdBy": "Reggie.Pfannerstill@example.com",
+      "modifiedAt": "2014-12-04T00:00:00.000Z",
+      "modifiedBy": "America.Reichert86@example.com"
+    }
+  ],
+  "createdAt": "2000-07-22T00:00:00.000Z",
+  "createdBy": "Louie.MacGyver@example.com",
+  "modifiedAt": "2007-11-17T00:00:00.000Z",
+  "modifiedBy": "Ed_Streich64@example.net"
+}
+
+
+### GRHeader
+# @name GRHeader_PATCH
+PATCH {{server}}/odata/v4/GRManagement/GRHeader/21297090-1ced-4763-82f6-18efb0f38237
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "gr_id": "21297090-1ced-4763-82f6-18efb0f38237",
+  "gr_number": 69,
+  "gr_po_header_id": "21297090-fcbb-4715-a83a-d5cf62f5859d",
+  "gr_date": "2023-05-03",
+  "gr_store_loc": {
+    "vm_street": "vm_street-21297090",
+    "vm_city": "vm_city-21297090",
+    "vm_state": "vm_state-21297090",
+    "vm_country": "vm_country-21297090",
+    "vm_postal": "297090"
+  },
+  "gr_status": "Posted",
+  "to_gr_item": [
+    {
+      "gr_item_id": "21679294-556f-41fb-8e27-d9d14c8b4bb6",
+      "gr_itm_poitem_id": "21679294-25fe-4d82-8b5f-af3b7e18b7ac",
+      "gr_itm_received_qty": 15,
+      "gr_itm_uom": {
+        "unit": "79294"
+      },
+      "gr_itm_batch_no": 4,
+      "gr_remarks": "gr_remarks-21679294",
+      "to_gr_header": {
+        "gr_id": "21297090-1ced-4763-82f6-18efb0f38237"
+      },
+      "createdAt": "2012-12-09T00:00:00.000Z",
+      "createdBy": "Antoinette.Armstrong@example.com",
+      "modifiedAt": "2011-06-19T00:00:00.000Z",
+      "modifiedBy": "Zack.Schulist7@example.net"
+    },
+    {
+      "gr_item_id": "21679295-d071-403c-97bb-f6ba9b18fa5a",
+      "gr_itm_poitem_id": "21679295-bebd-44ff-b086-4f4b6e9abaed",
+      "gr_itm_received_qty": 95,
+      "gr_itm_uom": {
+        "unit": "79295"
+      },
+      "gr_itm_batch_no": 7,
+      "gr_remarks": "gr_remarks-21679295",
+      "to_gr_header": {
+        "gr_id": "21297090-1ced-4763-82f6-18efb0f38237"
+      },
+      "createdAt": "2003-06-28T00:00:00.000Z",
+      "createdBy": "Reggie.Pfannerstill@example.com",
+      "modifiedAt": "2014-12-04T00:00:00.000Z",
+      "modifiedBy": "America.Reichert86@example.com"
+    }
+  ],
+  "createdAt": "2000-07-22T00:00:00.000Z",
+  "createdBy": "Louie.MacGyver@example.com",
+  "modifiedAt": "2007-11-17T00:00:00.000Z",
+  "modifiedBy": "Ed_Streich64@example.net"
+}
+
+
+### GRHeader
+# @name GRHeader_DELETE
+DELETE {{server}}/odata/v4/GRManagement/GRHeader/21297090-1ced-4763-82f6-18efb0f38237
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### GRItems
+# @name GRItems_GET
+GET {{server}}/odata/v4/GRManagement/GRItems
+Authorization: Basic {{username}}:{{password}}
+
+
+### GRItems
+# @name GRItems_POST
+POST {{server}}/odata/v4/GRManagement/GRItems
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "gr_item_id": "21679294-556f-41fb-8e27-d9d14c8b4bb6",
+  "gr_itm_poitem_id": "21679294-25fe-4d82-8b5f-af3b7e18b7ac",
+  "gr_itm_received_qty": 15,
+  "gr_itm_uom": {
+    "unit": "79294"
+  },
+  "gr_itm_batch_no": 4,
+  "gr_remarks": "gr_remarks-21679294",
+  "to_gr_header": {
+    "gr_id": "21297090-1ced-4763-82f6-18efb0f38237"
+  },
+  "createdAt": "2012-12-09T00:00:00.000Z",
+  "createdBy": "Antoinette.Armstrong@example.com",
+  "modifiedAt": "2011-06-19T00:00:00.000Z",
+  "modifiedBy": "Zack.Schulist7@example.net"
+}
+
+
+### GRItems
+# @name GRItems_PATCH
+PATCH {{server}}/odata/v4/GRManagement/GRItems/21679294-556f-41fb-8e27-d9d14c8b4bb6
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "gr_item_id": "21679294-556f-41fb-8e27-d9d14c8b4bb6",
+  "gr_itm_poitem_id": "21679294-25fe-4d82-8b5f-af3b7e18b7ac",
+  "gr_itm_received_qty": 15,
+  "gr_itm_uom": {
+    "unit": "79294"
+  },
+  "gr_itm_batch_no": 4,
+  "gr_remarks": "gr_remarks-21679294",
+  "to_gr_header": {
+    "gr_id": "21297090-1ced-4763-82f6-18efb0f38237"
+  },
+  "createdAt": "2012-12-09T00:00:00.000Z",
+  "createdBy": "Antoinette.Armstrong@example.com",
+  "modifiedAt": "2011-06-19T00:00:00.000Z",
+  "modifiedBy": "Zack.Schulist7@example.net"
+}
+
+
+### GRItems
+# @name GRItems_DELETE
+DELETE {{server}}/odata/v4/GRManagement/GRItems/21679294-556f-41fb-8e27-d9d14c8b4bb6
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### Currencies
+# @name Currencies_GET
+GET {{server}}/odata/v4/GRManagement/Currencies
+Authorization: Basic {{username}}:{{password}}

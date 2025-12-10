@@ -65,7 +65,7 @@ define type ApprovalStatus {
 
 define type Remarks          : String(255);
 
-define type Desctiption      : String(50);
+define type Description      : String(50);
 
 define type Discount_percent : Decimal(2, 2);
 
@@ -127,7 +127,7 @@ define entity VendorMaster : primary {
 define entity MaterialMaster : primary {
     key mm_id        : UUID not null; 
     mm_code      : String(20) not null;
-    mm_desc      : Desctiption;
+    mm_desc      : Description;
     mm_type      : material_type;
     mm_uom       : UoM;
     mm_stdprice  : Integer; // Can be decimal
@@ -137,13 +137,17 @@ define entity MaterialMaster : primary {
 };
 
 // PURCHASE ORDER HEADER
+@assert.unique: {
+    local: [po_number, po_coco, po_org]
+}
 define entity POHeader : primary {
     key po_id             : UUID not null;
-    po_number         : Integer not null;
+    @assert.range: [(450000),(450101)]
+    po_number         : Integer not null default 450000;
     // vendor : for foreign key relations for future
     po_vendor_id : VendorMaster:vm_id;
-    po_coco           : String(5) not null;
-    po_org            : String(5) not null;
+    po_coco           : String(5) ;
+    po_org            : String(5);
     // po_curr : currency;
     po_curr           : Currency;
     po_doc_date       : Date;
@@ -169,7 +173,7 @@ define entity POItems : primary {
     po_line_itm_no        : String(15);
     // material : for foreign key relations to MaterialMaster;
     po_itm_material_id : MaterialMaster:mm_id;
-    po_itm_desc           : Desctiption;
+    po_itm_desc           : Description;
     po_itm_quantiy        : Integer;
     po_uom                : UoM;
     po_net_price          : Decimal(8, 2);

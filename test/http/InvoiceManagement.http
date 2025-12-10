@@ -1,0 +1,243 @@
+@server=http://localhost:4004
+@username=alice
+@password=
+
+
+### InvoiceHeader
+# @name InvoiceHeader_GET
+GET {{server}}/odata/v4/InvManagement/InvoiceHeader
+Authorization: Basic {{username}}:{{password}}
+
+
+### InvoiceHeader
+# @name InvoiceHeader_POST
+POST {{server}}/odata/v4/InvManagement/InvoiceHeader
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "inv_id": "22774156-7aa9-4ae1-8091-b2dae4131f16",
+  "inv_no": 99,
+  "inv_vender_id": "22774156-e2d6-430c-bcc7-df0e4f268b4d",
+  "inv_po_header_id": "22774156-7575-45bb-aa30-7e1481604058",
+  "inv_gr_header_id": "22774156-7390-4333-9dbd-420f22ef87fd",
+  "inv_date": "2008-04-08",
+  "inv_post_date": "2010-03-19",
+  "inv_currency": {
+    "code": "092"
+  },
+  "inv_total_before_tax": 571247.25,
+  "inv_total_amount": 372395.32,
+  "inv_status": "Rejected",
+  "inv_verified_posted_managed": {
+    "postedBy": "postedBy-22774156",
+    "postedAt": "2002-11-24T00:00:00.000Z",
+    "verifiedBy": "verifiedBy-22774156",
+    "verifiedAt": "2003-02-13T00:00:00.000Z"
+  },
+  "inv_rejection_remarks": "inv_rejection_remarks-22774156",
+  "to_inv_items": [
+    {
+      "inv_itm_id": "22135684-1a3b-4a3a-9f04-b6ca1d344e2e",
+      "inv_po_itm_id": "22135684-cfcd-442c-9b6c-8109f837e50f",
+      "inv_itm_qty": 32,
+      "inv_uom": {
+        "unit": "35684"
+      },
+      "inv_net_price": 46620.44,
+      "inv_discount": 0.41,
+      "inv_gst": {
+        "percent": 0.29
+      },
+      "inv_line_itm_net_amount": 64,
+      "inv_line_itm_tax": 402887.83,
+      "inv_line_itm_total": 588174.31,
+      "createdAt": "2002-03-30T00:00:00.000Z",
+      "createdBy": "Isadore_Green@example.net",
+      "modifiedAt": "2006-03-29T00:00:00.000Z",
+      "modifiedBy": "Bonita_Ruecker@example.net"
+    },
+    {
+      "inv_itm_id": "22135685-243e-49a8-9ef7-f6e00b338285",
+      "inv_po_itm_id": "22135685-a7cc-4739-b6f2-26f6c7b9c3fe",
+      "inv_itm_qty": 6,
+      "inv_uom": {
+        "unit": "35685"
+      },
+      "inv_net_price": 337373.12,
+      "inv_discount": 0.18,
+      "inv_gst": {
+        "percent": 0.26
+      },
+      "inv_line_itm_net_amount": 18,
+      "inv_line_itm_tax": 598134.11,
+      "inv_line_itm_total": 683200.17,
+      "createdAt": "2022-09-23T00:00:00.000Z",
+      "createdBy": "Javon.Jaskolski@example.org",
+      "modifiedAt": "2008-10-31T00:00:00.000Z",
+      "modifiedBy": "Danny.Yundt@example.org"
+    }
+  ],
+  "createdAt": "2013-09-17T00:00:00.000Z",
+  "createdBy": "Thad_Hoeger50@example.org",
+  "modifiedAt": "2018-08-07T00:00:00.000Z",
+  "modifiedBy": "Heath74@example.net"
+}
+
+
+### InvoiceHeader
+# @name InvoiceHeader_PATCH
+PATCH {{server}}/odata/v4/InvManagement/InvoiceHeader/22774156-7aa9-4ae1-8091-b2dae4131f16
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "inv_id": "22774156-7aa9-4ae1-8091-b2dae4131f16",
+  "inv_no": 99,
+  "inv_vender_id": "22774156-e2d6-430c-bcc7-df0e4f268b4d",
+  "inv_po_header_id": "22774156-7575-45bb-aa30-7e1481604058",
+  "inv_gr_header_id": "22774156-7390-4333-9dbd-420f22ef87fd",
+  "inv_date": "2008-04-08",
+  "inv_post_date": "2010-03-19",
+  "inv_currency": {
+    "code": "092"
+  },
+  "inv_total_before_tax": 571247.25,
+  "inv_total_amount": 372395.32,
+  "inv_status": "Rejected",
+  "inv_verified_posted_managed": {
+    "postedBy": "postedBy-22774156",
+    "postedAt": "2002-11-24T00:00:00.000Z",
+    "verifiedBy": "verifiedBy-22774156",
+    "verifiedAt": "2003-02-13T00:00:00.000Z"
+  },
+  "inv_rejection_remarks": "inv_rejection_remarks-22774156",
+  "to_inv_items": [
+    {
+      "inv_itm_id": "22135684-1a3b-4a3a-9f04-b6ca1d344e2e",
+      "inv_po_itm_id": "22135684-cfcd-442c-9b6c-8109f837e50f",
+      "inv_itm_qty": 32,
+      "inv_uom": {
+        "unit": "35684"
+      },
+      "inv_net_price": 46620.44,
+      "inv_discount": 0.41,
+      "inv_gst": {
+        "percent": 0.29
+      },
+      "inv_line_itm_net_amount": 64,
+      "inv_line_itm_tax": 402887.83,
+      "inv_line_itm_total": 588174.31,
+      "createdAt": "2002-03-30T00:00:00.000Z",
+      "createdBy": "Isadore_Green@example.net",
+      "modifiedAt": "2006-03-29T00:00:00.000Z",
+      "modifiedBy": "Bonita_Ruecker@example.net"
+    },
+    {
+      "inv_itm_id": "22135685-243e-49a8-9ef7-f6e00b338285",
+      "inv_po_itm_id": "22135685-a7cc-4739-b6f2-26f6c7b9c3fe",
+      "inv_itm_qty": 6,
+      "inv_uom": {
+        "unit": "35685"
+      },
+      "inv_net_price": 337373.12,
+      "inv_discount": 0.18,
+      "inv_gst": {
+        "percent": 0.26
+      },
+      "inv_line_itm_net_amount": 18,
+      "inv_line_itm_tax": 598134.11,
+      "inv_line_itm_total": 683200.17,
+      "createdAt": "2022-09-23T00:00:00.000Z",
+      "createdBy": "Javon.Jaskolski@example.org",
+      "modifiedAt": "2008-10-31T00:00:00.000Z",
+      "modifiedBy": "Danny.Yundt@example.org"
+    }
+  ],
+  "createdAt": "2013-09-17T00:00:00.000Z",
+  "createdBy": "Thad_Hoeger50@example.org",
+  "modifiedAt": "2018-08-07T00:00:00.000Z",
+  "modifiedBy": "Heath74@example.net"
+}
+
+
+### InvoiceHeader
+# @name InvoiceHeader_DELETE
+DELETE {{server}}/odata/v4/InvManagement/InvoiceHeader/22774156-7aa9-4ae1-8091-b2dae4131f16
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### Currencies
+# @name Currencies_GET
+GET {{server}}/odata/v4/InvManagement/Currencies
+Authorization: Basic {{username}}:{{password}}
+
+
+### InvoiceItems
+# @name InvoiceItems_GET
+GET {{server}}/odata/v4/InvManagement/InvoiceItems
+Authorization: Basic {{username}}:{{password}}
+
+
+### InvoiceItems
+# @name InvoiceItems_POST
+POST {{server}}/odata/v4/InvManagement/InvoiceItems
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "inv_itm_id": "22135684-1a3b-4a3a-9f04-b6ca1d344e2e",
+  "inv_po_itm_id": "22135684-cfcd-442c-9b6c-8109f837e50f",
+  "inv_itm_qty": 32,
+  "inv_uom": {
+    "unit": "35684"
+  },
+  "inv_net_price": 46620.44,
+  "inv_discount": 0.41,
+  "inv_gst": {
+    "percent": 0.29
+  },
+  "inv_line_itm_net_amount": 64,
+  "inv_line_itm_tax": 402887.83,
+  "inv_line_itm_total": 588174.31,
+  "createdAt": "2002-03-30T00:00:00.000Z",
+  "createdBy": "Isadore_Green@example.net",
+  "modifiedAt": "2006-03-29T00:00:00.000Z",
+  "modifiedBy": "Bonita_Ruecker@example.net"
+}
+
+
+### InvoiceItems
+# @name InvoiceItems_PATCH
+PATCH {{server}}/odata/v4/InvManagement/InvoiceItems/22135684-1a3b-4a3a-9f04-b6ca1d344e2e
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "inv_itm_id": "22135684-1a3b-4a3a-9f04-b6ca1d344e2e",
+  "inv_po_itm_id": "22135684-cfcd-442c-9b6c-8109f837e50f",
+  "inv_itm_qty": 32,
+  "inv_uom": {
+    "unit": "35684"
+  },
+  "inv_net_price": 46620.44,
+  "inv_discount": 0.41,
+  "inv_gst": {
+    "percent": 0.29
+  },
+  "inv_line_itm_net_amount": 64,
+  "inv_line_itm_tax": 402887.83,
+  "inv_line_itm_total": 588174.31,
+  "createdAt": "2002-03-30T00:00:00.000Z",
+  "createdBy": "Isadore_Green@example.net",
+  "modifiedAt": "2006-03-29T00:00:00.000Z",
+  "modifiedBy": "Bonita_Ruecker@example.net"
+}
+
+
+### InvoiceItems
+# @name InvoiceItems_DELETE
+DELETE {{server}}/odata/v4/InvManagement/InvoiceItems/22135684-1a3b-4a3a-9f04-b6ca1d344e2e
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
